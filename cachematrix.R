@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## this is function for store matrix and calculate inverse matrixs
 
-## Write a short comment describing this function
+## stored a matrix and inverse matrix
+## check argument what invertible matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
     chcekMatrix <- isInvertibleMatrix(x)
@@ -23,7 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## calculate inverse matrix
+## if arg x has a inverse matrix, return message
+## if raf x isn't invertible matrix, return messge
 
 cacheSolve <- function(x, ...) {
     data <- x$get()
