@@ -4,14 +4,14 @@
 ## check argument what invertible matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
-    chcekMatrix <- isInvertibleMatrix(x)
-    if (!chcekMatrix) x <- NULL
+    checkMatrix <- isInvertibleMatrix(x)
+    if (!checkMatrix) x <- NULL
     
     m <- NULL
     set <- function(y) {
         x <<- y
-        chcekMatrix <- isInvertibleMatrix(y)
-        if (!chcekMatrix) { x <<- NULL }
+        checkMatrix <- isInvertibleMatrix(y)
+        if (!checkMatrix) { x <<- NULL }
         m <<- NULL
     }
     get <- function() { x }
@@ -29,8 +29,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
     data <- x$get()
-    chcekMatrix <- isInvertibleMatrix(data)
-    if (!chcekMatrix) {
+    checkMatrix <- isInvertibleMatrix(data)
+    if (!checkMatrix) {
         return(data)
     }
     m <- x$getIV()
